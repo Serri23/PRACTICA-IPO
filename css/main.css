@@ -1,0 +1,136 @@
+body {
+	font-size: 100%;
+	font-family: Helvetica;
+    padding: 0 300px 100px 40px;
+	max-width: 2000px;
+	line-height: 1.5;
+    margin:0;
+        
+}
+
+header{
+    width:100%;
+    background: #4E94AB;
+   
+}
+
+#btn-menu{
+    display:none;
+}
+
+header label{
+    display: none;
+    width:30px;
+    height:30px;
+    padding;10px;
+    border-right:1px solid #fff;
+}
+
+header label:hover{
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+}
+
+.menu ul{
+    margin:0;
+    list-style:none;
+    padding:0;
+    display: flex;
+    
+    
+}
+
+.menu li{
+    
+    border-right:1px solid #fff;
+}
+.menu li:hover{
+    background:rgba(0,0,0,0.3);
+}
+.menu li a{
+    display:block;
+    padding:15px 20px;
+    color:#fff;
+    text-decoration: none;
+}
+
+@media(max-width:768px){
+    header label{
+        display:block;
+    }
+    .menu{
+        position: absolute;
+        background:#4E94AB;
+        width:70%;
+        margin-left:-70%;
+        transition: all0.5s;
+    }
+    
+    .menu ul{
+        flex-direction:column;
+    }
+    
+    .menu li{
+        border-top: 1px solid #fff;
+    }
+    
+    #btn-menu:checked ~ .menu{
+        margin:0;
+    }
+}
+h1{
+    font-size:120%;
+    font-family: Helvetica;
+    
+    
+}
+h2,h3{
+    font-size: 180%;
+    font-family: Helvetica;
+    border-bottom: 3px solid #4E94AB;
+    margin: 1em 0;
+    text-transform: uppercase;
+}
+
+.banner{
+    width: 700px;
+    height: 300px;
+    border: 3px solid #4E94AB;
+    margin: auto;
+    
+   
+    background-size:cover;
+    animation:banner 10s infinite;
+    animation-direction: alternate;
+        
+}
+
+@keyframes banner{
+    0%, 20%{
+        background-image:url(img/1.jpg);
+        opacity:1;
+    }
+    21%, 24%{
+        opacity: 0.1;
+    }
+    25%, 45%{
+        background-image:url(img/2.jpg);
+        opacity:1;
+    }
+    46%, 49%{
+        opacity:0.1;
+    }
+    50%,70%{
+        opacity:1;
+        background-image:url(img/3.jpg);
+        
+    }
+    71%,74%{
+        opacity: 0.1;
+    }
+    75%,100%{
+        opacity: 1;
+        background-image:url(img/4.jpg);
+    }
+}
+
